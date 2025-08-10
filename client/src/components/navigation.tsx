@@ -47,8 +47,8 @@ export default function Navigation({ currentPage, onPageChange }: NavigationProp
                 key={item.id}
                 className={`px-4 py-2 rounded-lg cursor-pointer transition-all duration-300 ${
                   currentPage === item.id
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-500'
-                    : 'hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500'
+                    ? 'bg-gradient-to-r from-white to-gray-400 text-black'
+                    : 'hover:bg-gradient-to-r hover:from-white hover:to-gray-400 hover:text-black'
                 }`}
                 onClick={() => handleNavClick(item.id)}
                 whileHover={{ y: -2 }}
@@ -89,8 +89,8 @@ export default function Navigation({ currentPage, onPageChange }: NavigationProp
                   key={item.id}
                   className={`px-4 py-2 rounded-lg cursor-pointer transition-all duration-300 ${
                     currentPage === item.id
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-500'
-                      : 'hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500'
+                      ? 'bg-gradient-to-r from-white to-gray-400 text-black'
+                      : 'hover:bg-gradient-to-r hover:from-white hover:to-gray-400 hover:text-black'
                   }`}
                   onClick={() => handleNavClick(item.id)}
                   whileHover={{ x: 5 }}

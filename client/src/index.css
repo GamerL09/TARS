@@ -91,7 +91,7 @@
   
   .glow-border {
     position: relative;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(156, 163, 175, 0.1));
     border: 1px solid transparent;
   }
   
@@ -104,7 +104,7 @@
     bottom: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+    background: linear-gradient(135deg, #FFFFFF, #9CA3AF);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     -webkit-mask-composite: xor;

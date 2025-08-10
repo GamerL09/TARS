@@ -156,11 +156,10 @@ export default function Contact() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="custom-bot">Custom Discord Bot</SelectItem>
-                    <SelectItem value="community-management">Community Management</SelectItem>
-                    <SelectItem value="gaming-integration">Gaming Integration</SelectItem>
-                    <SelectItem value="analytics">Analytics & Insights</SelectItem>
-                    <SelectItem value="api-development">API Development</SelectItem>
-                    <SelectItem value="maintenance">Maintenance & Support</SelectItem>
+                    <SelectItem value="community-features">Community Features</SelectItem>
+                    <SelectItem value="gaming-bot">Gaming Bot</SelectItem>
+                    <SelectItem value="bot-maintenance">Bot Maintenance</SelectItem>
+                    <SelectItem value="consultation">Project Consultation</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

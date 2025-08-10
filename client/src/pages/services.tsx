@@ -7,44 +7,30 @@ export default function Services() {
     {
       icon: Bot,
       title: 'Custom Discord Bots',
-      description: 'Tailored automation solutions with advanced AI capabilities, custom commands, and seamless integration.',
-      features: ['AI-powered responses', 'Custom command creation', 'Database integration', '24/7 support'],
-      color: 'text-blue-400'
+      description: 'Fully custom Discord bots built from scratch to meet your specific requirements and server needs.',
+      features: ['Custom commands', 'Moderation tools', 'Fun & utility features', 'Server management'],
+      color: 'text-gray-300'
     },
     {
       icon: Users,
-      title: 'Community Management',
-      description: 'Advanced moderation tools, automated member management, and engagement analytics for thriving communities.',
-      features: ['Auto-moderation', 'Role management', 'Analytics dashboard', 'Custom rules engine'],
-      color: 'text-purple-400'
+      title: 'Community Features',
+      description: 'Specialized bot features designed to engage your community and enhance user experience.',
+      features: ['Welcome systems', 'Role management', 'Event scheduling', 'Member tracking'],
+      color: 'text-gray-400'
     },
     {
       icon: Gamepad2,
-      title: 'Gaming Integration',
-      description: 'Game-specific features, tournament management, leaderboards, and real-time statistics integration.',
-      features: ['Game API integration', 'Tournament brackets', 'Live leaderboards', 'Achievement systems'],
-      color: 'text-green-400'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive server analytics, user behavior insights, and growth optimization strategies.',
-      features: ['Real-time metrics', 'Growth tracking', 'Custom reports', 'Predictive analytics'],
-      color: 'text-red-400'
-    },
-    {
-      icon: Code,
-      title: 'API Development',
-      description: 'Custom REST APIs, webhooks, and third-party integrations to extend your bot\'s capabilities.',
-      features: ['RESTful APIs', 'Webhook systems', 'Database design', 'Cloud deployment'],
-      color: 'text-yellow-400'
+      title: 'Gaming Bots',
+      description: 'Custom bots tailored for gaming communities with game-specific features and integrations.',
+      features: ['Game statistics', 'Player tracking', 'Tournament systems', 'Clan management'],
+      color: 'text-gray-500'
     },
     {
       icon: Wrench,
-      title: 'Maintenance & Support',
-      description: 'Ongoing maintenance, updates, and 24/7 technical support to ensure optimal bot performance.',
-      features: ['24/7 monitoring', 'Regular updates', 'Bug fixes', 'Performance optimization'],
-      color: 'text-cyan-400'
+      title: 'Bot Maintenance',
+      description: 'Ongoing support and maintenance to keep your custom bot running smoothly and up-to-date.',
+      features: ['Regular updates', 'Bug fixes', 'Feature additions', '24/7 monitoring'],
+      color: 'text-gray-600'
     }
   ];
 

@@ -27,21 +27,21 @@ export default function ParticlesBackground() {
       canvas.height = window.innerHeight;
     };
 
-    const colors = ['#3B82F6', '#8B5CF6', '#FFFFFF'];
+    const colors = ['#FFFFFF', '#D1D5DB', '#9CA3AF', '#6B7280'];
 
     const createParticles = () => {
       const particles: Particle[] = [];
-      const particleCount = Math.min(80, Math.floor(window.innerWidth / 15));
+      const particleCount = Math.min(60, Math.floor(window.innerWidth / 20));
 
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 2,
-          vy: (Math.random() - 0.5) * 2,
-          size: Math.random() * 3 + 1,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 2 + 0.5,
           color: colors[Math.floor(Math.random() * colors.length)],
-          opacity: Math.random() * 0.5 + 0.2,
+          opacity: Math.random() * 0.6 + 0.2,
         });
       }
 
@@ -58,28 +58,20 @@ export default function ParticlesBackground() {
       ctx.restore();
     };
 
-    const drawConnections = () => {
-      const particles = particlesRef.current;
-      ctx.strokeStyle = '#3B82F6';
-      ctx.lineWidth = 1;
-
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < 150) {
-            ctx.save();
-            ctx.globalAlpha = (150 - distance) / 150 * 0.4;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-            ctx.restore();
-          }
-        }
-      }
+    const drawGlow = (particle: Particle) => {
+      ctx.save();
+      const gradient = ctx.createRadialGradient(
+        particle.x, particle.y, 0,
+        particle.x, particle.y, particle.size * 3
+      );
+      gradient.addColorStop(0, particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0'));
+      gradient.addColorStop(1, particle.color + '00');
+      
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
     };
 
     const updateParticles = () => {
@@ -105,8 +97,9 @@ export default function ParticlesBackground() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       updateParticles();
-      drawConnections();
       
+      // Draw glow first, then particles on top
+      particlesRef.current.forEach(drawGlow);
       particlesRef.current.forEach(drawParticle);
       
       animationFrameRef.current = requestAnimationFrame(animate);
