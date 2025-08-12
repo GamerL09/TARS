@@ -221,11 +221,11 @@ export default function Contact() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="text-blue-400" size={20} />
-                  <span>hello@tars-bots.com</span>
+                  <span>anonymousgroupofeducators@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <span className="text-purple-400 text-xl">💬</span>
-                  <span>TARS#0001</span>
+                  <span>frontman.6969</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Clock className="text-green-400" size={20} />

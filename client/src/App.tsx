@@ -7,6 +7,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import Navigation from '@/components/navigation';
 import ParticlesBackground from '@/components/particles-background';
 import PageTransition from '@/components/page-transition';
+import Footer from '@/components/footer';
 import Home from '@/pages/home';
 import Services from '@/pages/services';
 import About from '@/pages/about';
@@ -55,6 +56,8 @@ function Router() {
           <Route component={NotFound} />
         </Switch>
       </PageTransition>
+      
+      <Footer />
     </div>
   );
 }

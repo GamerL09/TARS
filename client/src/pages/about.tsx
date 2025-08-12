@@ -12,7 +12,7 @@ export default function About() {
   ];
 
   const stats = [
-    { value: '500+', label: 'Bots Deployed' },
+    { value: '10+', label: 'Bots Deployed' },
     { value: '99.9%', label: 'Uptime' },
     { value: '24/7', label: 'Support' }
   ];
