@@ -182,12 +182,11 @@ export default function Contact() {
                     <SelectValue placeholder="Select budget range" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="500-1000">$500 - $1,000</SelectItem>
-                    <SelectItem value="1000-2500">$1,000 - $2,500</SelectItem>
-                    <SelectItem value="2500-5000">$2,500 - $5,000</SelectItem>
-                    <SelectItem value="5000-10000">$5,000 - $10,000</SelectItem>
-                    <SelectItem value="10000+">$10,000+</SelectItem>
-                    <SelectItem value="discuss">Let's discuss</SelectItem>
+                    <SelectItem value="25-45">$25 - $45</SelectItem>
+                    <SelectItem value="50-75">$50 - $75</SelectItem>
+                    <SelectItem value="60-85">$60 - $85</SelectItem>
+                    <SelectItem value="75-99">$75 - $99</SelectItem>
+                    <SelectItem value="custom">Custom Quote</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
